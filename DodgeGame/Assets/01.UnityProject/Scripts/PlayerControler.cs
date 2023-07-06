@@ -11,6 +11,15 @@ public class PlayerControler : MonoBehaviour
     void Start()
     {
         playerRigid = GetComponent<Rigidbody>();
+
+        GFunc.Assert(playerRigid != null);  // 검사하고 싶은 상태의 !를 본다
+
+        // == if(playerRigid == null )
+        //    {
+        //        Debug.LogError("플레이어의 리지드 바디 컴포넌트를 찾을 수 없습니다");
+        //    }
+
+        GFunc.Log("잘 찍히나?");
     }
 
     // Update is called once per frame
